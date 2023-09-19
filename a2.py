@@ -34,12 +34,24 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         # WARNING: this condition contains the bulk of the code for the assignment
         # If you get stuck on this one, we encourage you to attempt the other conditions
         #   and come back to this one afterwards
-        # elif(pattern[pind] == "%"):
-        #     toSearch = source[sind]
-        #     e = True
-        #     while(e):
-        #         if sind == len(source) or pind == len(pattern):
-        #             break
+        elif(pattern[pind] == "%"):
+            e = True
+            try:
+                toSearch = pattern[pind + 1]
+            except:
+                toSearch = ""
+            toAdd = ""
+            while(e):
+                if sind == len(source):
+                    break
+                elif(source[sind] == toSearch):
+                    e = False
+                    break
+                else:
+                    toAdd += source[sind] + " "
+                    sind += 1
+            pind += 1
+            result.append(toAdd[:-1])
                 
 
         # 3) if we reached the end of the source but not the pattern
