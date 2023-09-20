@@ -13,7 +13,7 @@ This assignment is about learning and applying the while loop and iterating thro
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
 
-Making sure the index didn’t go out of bounds for the “%” part of the match function was tricky, but it ended up just being a line of code that I tabbed one too many times, so instead of adding to the index after the loop ended, it would just keep adding to the index within the loop. Other than that bug, nothing else was difficult.
+Making sure the index didn’t go out of bounds for the “%” part of the match function was tricky, but it ended up just being a line of code that I tabbed one too many times, so instead of adding to the index after the loop ended, it would just keep adding to the index within the loop. Also I had an extra space at the end when returning, but after I realised you could splice strings, I just added [:-1] and it fixed it. Other than those things, nothing else was difficult.
 
 2. Explain how you could use the match function for extracting information from a movie database.
 
